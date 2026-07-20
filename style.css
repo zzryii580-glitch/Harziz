@@ -208,22 +208,44 @@ body {
 
 .card {
     width: 100%;
-    height: 350px;
+    height: 100%;
     background: var(--card-bg);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 15px;
-    padding: 30px;
+    overflow: hidden;
     transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
 .card-inner {
     text-align: center;
     width: 100%;
+    padding: 30px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-inner h3 {
@@ -242,6 +264,10 @@ body {
     box-shadow: 0 0 30px rgba(138,43,226,0.5);
     transform: translateY(-10px);
     background: rgba(138,43,226,0.1);
+}
+
+.card:hover .card-image img {
+    transform: scale(1.1);
 }
 
 .view-btn {
