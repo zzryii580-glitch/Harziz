@@ -2,6 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Portfolio | C-TECH</title>
 </head>
@@ -9,14 +10,14 @@
     <nav class="navbar">
         <div class="logo">C-TECH</div>
         <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="portfolio.html">PORTFOLIO</a></li>
-            <li><a href="about.html">TENTANG</a></li>
-            <li><a href="contact.html" class="btn-glow">HUBUNGI KAMI</a></li>
+            <li><a href="index.html" class="nav-link">HOME</a></li>
+            <li><a href="portofolio.html" class="nav-link active">PORTFOLIO</a></li>
+            <li><a href="about.html" class="nav-link">TENTANG</a></li>
+            <li><a href="contact.html" class="nav-link btn-glow">HUBUNGI KAMI</a></li>
         </ul>
     </nav>
     <section class="portfolio-container">
-        <h2 class="section-title">PROJECT LOGS</h2>
+        <h2 class="section-title fade-in">PROJECT LOGS</h2>
         <div class="grid-container">
             <div class="card">
                 <div class="card-inner">
@@ -32,7 +33,15 @@
                     <button class="view-btn">DETAIL</button>
                 </div>
             </div>
+            <div class="card">
+                <div class="card-inner">
+                    <h3>Web Development</h3>
+                    <p>Modern & Responsive</p>
+                    <button class="view-btn">DETAIL</button>
+                </div>
+            </div>
         </div>
     </section>
+    <script src="script.js"></script>
 </body>
 </html>

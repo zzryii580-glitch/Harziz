@@ -2,6 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Kontak | C-TECH</title>
 </head>
@@ -9,16 +10,20 @@
     <nav class="navbar">
         <div class="logo">C-TECH</div>
         <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="portfolio.html">PORTFOLIO</a></li>
-            <li><a href="about.html">TENTANG</a></li>
-            <li><a href="contact.html" class="btn-glow">HUBUNGI KAMI</a></li>
+            <li><a href="index.html" class="nav-link">HOME</a></li>
+            <li><a href="portofolio.html" class="nav-link">PORTFOLIO</a></li>
+            <li><a href="about.html" class="nav-link">TENTANG</a></li>
+            <li><a href="contact.html" class="nav-link btn-glow active">HUBUNGI KAMI</a></li>
         </ul>
     </nav>
-    <section class="content-page" style="padding: 100px 5%;">
-        <h1>HUBUNGI KAMI</h1>
-        <button onclick="openWhatsApp()" class="btn-wa">Chat via WhatsApp</button>
+    <section class="content-page">
+        <h1 class="fade-in">HUBUNGI KAMI</h1>
+        <p>Siap membantu mewujudkan ide desain Anda menjadi kenyataan. Hubungi kami sekarang!</p>
+        <div class="contact-buttons">
+            <button onclick="openWhatsApp()" class="btn-wa">💬 Chat via WhatsApp</button>
+            <button onclick="location.href='mailto:contact@ctech.com'" class="btn-email">📧 Email</button>
+        </div>
     </section>
     <script src="script.js"></script>
 </body>
-  </html>
+</html>
