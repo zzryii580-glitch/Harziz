@@ -1,0 +1,19 @@
+:root {
+    --bg-dark: #0a0a0c;
+    --neon-purple: #8a2be2;
+    --text-white: #ffffff;
+}
+body { background-color: var(--bg-dark); color: var(--text-white); font-family: 'Segoe UI', sans-serif; margin: 0; }
+.navbar { display: flex; justify-content: space-between; padding: 20px 5%; align-items: center; }
+.navbar ul { display: flex; list-style: none; gap: 20px; }
+.navbar a { text-decoration: none; color: white; font-weight: bold; }
+.hero { display: flex; align-items: center; justify-content: space-around; height: 80vh; padding: 0 5%; }
+.highlight { color: var(--neon-purple); }
+.shadow-pulse { width: 400px; height: 400px; background: #222; border-radius: 20px; animation: pulse 3s infinite; }
+@keyframes pulse { 0% { filter: drop-shadow(0 0 5px var(--neon-purple)); } 50% { filter: drop-shadow(0 0 20px var(--neon-purple)); } }
+.portfolio-container { padding: 100px 5%; }
+.grid-container { display: flex; gap: 20px; flex-wrap: wrap; }
+.card { width: 300px; height: 400px; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 15px; transition: 0.5s; padding: 20px; }
+.card:hover { border: 1px solid var(--neon-purple); box-shadow: 0 0 20px var(--neon-purple); transform: translateY(-10px); }
+.btn-wa { background: #25D366; color: white; padding: 15px 30px; border: none; border-radius: 5px; cursor: pointer; }
+.btn-primary { background: var(--neon-purple); border: none; padding: 15px 30px; color: white; cursor: pointer; }
