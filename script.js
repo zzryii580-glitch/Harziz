@@ -49,3 +49,32 @@ const observer = new IntersectionObserver(function(entries) {
 document.querySelectorAll('.card, .feature-item').forEach(el => {
     observer.observe(el);
 });
+
+// Modal Functionality
+const modal = document.getElementById("modalDetail");
+const modalImg = document.getElementById("imgFull");
+const closeBtn = document.querySelector(".close-modal");
+
+// Tambahkan event klik ke semua tombol "DETAIL"
+document.querySelectorAll('.view-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        // Mengambil elemen gambar yang ada di kartu yang sama dengan tombol
+        const card = this.closest('.card');
+        const img = card.querySelector('img');
+        
+        modal.style.display = "block";
+        modalImg.src = img.src;
+    });
+});
+
+// Fungsi tutup modal
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Tutup modal jika klik di area hitam
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
