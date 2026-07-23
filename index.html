@@ -7,14 +7,20 @@
     <title>C-TECH | System Awakening</title>
 </head>
 <body>
-    window.addEventListener('load', function () {
-    const splashScreen = document.getElementById('splash-screen');
-    
-    // Berikan jeda sedikit (misal 1 detik) agar animasi sempat terlihat elegan
-    setTimeout(() => {
-        splashScreen.classList.add('splash-hidden');
-    }, 1000);
-});
+    <script>
+    // Langsung jalankan fungsi tanpa menunggu event aneh-aneh
+    setTimeout(function() {
+        var splash = document.getElementById('splash-screen');
+        if (splash) {
+            splash.style.opacity = '0';
+            splash.style.visibility = 'hidden';
+            splash.style.transition = '0.5s ease';
+            setTimeout(function() {
+                splash.remove(); // Hapus permanen dari halaman agar web langsung bisa diakses
+            }, 500);
+        }
+    }, 800); // 800 milidetik (0.8 detik) - Cepat dan tidak bikin nyangkut
+</script>
 
     <!-- C-TECH Splash Screen -->
 <div id="splash-screen">
