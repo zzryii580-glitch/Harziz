@@ -659,3 +659,10 @@ body {
     visibility: hidden;
     transform: scale(1.05); /* Sedikit membesar saat menghilang agar dramatis */
 }
+
+.splash-hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.05);
+    pointer-events: none; /* <-- Tambahkan ini agar tidak nge-lock klik web */
+}
