@@ -78,3 +78,12 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+window.addEventListener('load', function () {
+    const splashScreen = document.getElementById('splash-screen');
+    
+    // Berikan jeda sedikit (misal 1 detik) agar animasi sempat terlihat elegan
+    setTimeout(() => {
+        splashScreen.classList.add('splash-hidden');
+    }, 1000);
+});
