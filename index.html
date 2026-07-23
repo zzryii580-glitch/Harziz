@@ -7,6 +7,15 @@
     <title>C-TECH | System Awakening</title>
 </head>
 <body>
+    window.addEventListener('load', function () {
+    const splashScreen = document.getElementById('splash-screen');
+    
+    // Berikan jeda sedikit (misal 1 detik) agar animasi sempat terlihat elegan
+    setTimeout(() => {
+        splashScreen.classList.add('splash-hidden');
+    }, 1000);
+});
+
     <!-- C-TECH Splash Screen -->
 <div id="splash-screen">
     <div class="splash-content">
