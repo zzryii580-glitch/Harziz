@@ -78,13 +78,16 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-
-
-window.addEventListener('load', function () {
+document.addEventListener("DOMContentLoaded", function () {
     const splashScreen = document.getElementById('splash-screen');
     
-    // Splash screen akan langsung hilang setelah loading bar terisi (0.6 detik)
+    // Paksa hilang setelah 0.7 detik, dijamin tidak akan nyangkut/stuck
     setTimeout(() => {
         splashScreen.classList.add('splash-hidden');
-    }, 600); 
+        
+        // Hapus elemen dari DOM setelah transisi selesai agar tidak mengganggu klik web
+        setTimeout(() => {
+            splashScreen.remove();
+        }, 400);
+    }, 700);
 });
