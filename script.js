@@ -79,11 +79,12 @@ window.onclick = function(event) {
     }
 }
 
+
 window.addEventListener('load', function () {
     const splashScreen = document.getElementById('splash-screen');
     
-    // Berikan jeda sedikit (misal 1 detik) agar animasi sempat terlihat elegan
+    // Splash screen akan langsung hilang setelah loading bar terisi (0.6 detik)
     setTimeout(() => {
         splashScreen.classList.add('splash-hidden');
-    }, 1000);
+    }, 600); 
 });
